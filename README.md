@@ -1,6 +1,5 @@
 # Cross-Border Wildlife & Community Protection System
 
-![Project Banner](https://via.placeholder.com/800x200.png?text=Wildlife+%2B+Disaster+Protection+System)
 
 ## 🌍 Overview
 
@@ -27,7 +26,7 @@ A comprehensive **LoRa-based environmental monitoring and disaster alert system*
 | Firmware         | Embedded C / Arduino                                |
 | Data Aggregation | LoRa Gateway (Raspberry Pi or Helium hotspot)       |
 | Backend          | Firebase, FastAPI (for alert routing and dashboard) |
-| Visualization    | ReactJS / Flutter (for maps & control dashboard)    |
+| Visualization    | Flutter (for maps & control dashboard)              |
 
 ---
 
@@ -85,12 +84,12 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-### Dashboard (ReactJS or Flutter)
+### Dashboard (Flutter)
 
 ```bash
 cd dashboard
-npm install / flutter pub get
-npm start / flutter run
+flutter pub get
+flutter run
 ```
 
 ---
@@ -109,12 +108,6 @@ npm start / flutter run
 * Forest Rangers and Anti-Poaching Units
 * Local Villagers and Citizen Science Groups
 * NGOs and Disaster Relief Networks
-
----
-
-## 📄 License
-
-MIT License
 
 ---
 
