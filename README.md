@@ -1,96 +1,125 @@
-# VāyuRakshak - Scalable ML-Powered IoT Gas Monitoring System
+# Cross-Border Wildlife & Community Protection System
 
-## 🔍 Overview
-**VāyuRakshak** is an end-to-end, real-time **IoT-based gas monitoring and emission prediction system** designed for both **cattle farms** and **industrial factories**. It leverages **ESP32-based sensor nodes**, **LSTM-based machine learning models**, and **cloud infrastructure (Firebase, GCP, FastAPI)** to provide predictive insights and real-time alerts to protect human and animal life.
+![Project Banner](https://via.placeholder.com/800x200.png?text=Wildlife+%2B+Disaster+Protection+System)
+
+## 🌍 Overview
+
+A comprehensive **LoRa-based environmental monitoring and disaster alert system** designed to protect **wildlife, rural communities, and border areas**. The system uses **solar-powered sensor nodes**, **LED/siren alert infrastructure**, and **shared dashboards** to enable proactive response to **poaching**, **animal movement**, and **natural disasters**, fostering collaboration between **rangers, villagers, and NGOs**.
+
+---
 
 ## 🚀 Features
-* **Real-time gas monitoring** using ESP32 with gas sensors
-* **LSTM-based ML model** for emission pattern prediction
-* **Flutter mobile app** for alerting and visualization
-* **FastAPI backend** for data processing
-* **Firebase + GCP** for cloud sync, storage, and notifications
-* **Low-cost, low-power edge deployment**
-* **Scalable to both agricultural and industrial use cases**
+
+* **LoRa-based sensor network** for long-range, low-power communication
+* **Solar-powered collar and weather station nodes**
+* **Real-time animal tracking and intrusion alerts**
+* **Siren & LED public warning system** for villagers
+* **Open dashboard** for visualizing wildlife & hazard data
+* Supports **community participation** and **multi-agency coordination**
+
+---
 
 ## 📦 Tech Stack
 
-| Layer | Technologies Used |
-|-------|------------------|
-| Hardware | ESP32, MQ gas sensors, DHT11, Solar Power |
-| Firmware | Embedded C / Arduino |
-| Mobile App | Flutter (Dart) |
-| Backend API | FastAPI (Python) |
-| ML Model | LSTM (TensorFlow/Keras) |
-| Cloud Infra | Firebase (Firestore, Cloud Functions), GCP (Pub/Sub, Storage) |
+| Layer            | Technologies Used                                   |
+| ---------------- | --------------------------------------------------- |
+| Hardware         | LoRa Modules (RA-02), GPS, DHT11, Solar, Buzzers    |
+| Firmware         | Embedded C / Arduino                                |
+| Data Aggregation | LoRa Gateway (Raspberry Pi or Helium hotspot)       |
+| Backend          | Firebase, FastAPI (for alert routing and dashboard) |
+| Visualization    | ReactJS / Flutter (for maps & control dashboard)    |
 
-## 🛠 Architecture
-1. **Sensor Nodes** collect gas concentration, temperature, humidity
-2. Data is transmitted over **Wi-Fi** to the FastAPI server
-3. FastAPI passes data to **LSTM model** for prediction
-4. Results + raw data are stored in **Firebase Firestore**
-5. **Flutter app** fetches and displays real-time metrics
-6. Alerts are sent based on threshold breaches
+---
 
-## 📲 Flutter App
-* Displays live sensor data and predictions
-* Sends push notifications for abnormal readings
-* Visualizes emission history through charts
-* Integrated login via Firebase Auth
+## 🛠 System Architecture
 
-## 🧠 Machine Learning
-* **Model**: LSTM (Long Short-Term Memory)
-* **Input**: Time-series gas sensor data
-* **Output**: Predicted gas level for next interval
-* **Trained on**: Historical sensor data under various conditions
-* **Goal**: Enable **proactive** safety alerts before levels spike
+1. **Sensor Nodes**: Animal collars, weather units, motion detectors transmit data over **LoRa**
+2. **LoRa Gateway** collects packets and forwards to **cloud backend**
+3. **Firebase + FastAPI** stores, processes, and routes alert data
+4. **Dashboards** display live mapping and alert logs
+5. **Local devices** (sirens, LED boards) triggered via cloud
+
+---
+
+## 📲 Dashboard Features
+
+* Real-time wildlife movement map
+* Sensor health monitoring
+* Weather and disaster event overlays
+* Incident history logging and download
+
+---
+
+## 📡 Hardware Setup
+
+* Solar-powered **collar node** with GPS + gas/humidity sensors
+* **LoRa transmitter** to send data periodically
+* Villager-end devices with **LED boards + sirens** for local alerts
+* Central **LoRa gateway** with internet access
+
+---
+
+## 🔔 Use Cases
+
+* **Wildlife corridors** and border protection
+* **Poaching detection** and response
+* **Disaster alerts** for floods, forest fires, etc.
+* **Cross-agency coordination** for rural and environmental security
+
+---
 
 ## 🔧 Installation & Setup
 
-### ESP32
-1. Flash code via Arduino IDE
-2. Configure Wi-Fi & sensor pin mappings
+### Firmware (Node)
 
-### Backend (FastAPI)
+```bash
+# Flash Arduino code for collars and station nodes
+# Configure LoRa parameters and thresholds
+```
+
+### Backend
+
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-### Flutter App
+### Dashboard (ReactJS or Flutter)
+
 ```bash
-cd app
-flutter pub get
-flutter run
+cd dashboard
+npm install / flutter pub get
+npm start / flutter run
 ```
 
-### Firebase Setup
-* Create Firebase project
-* Enable Firestore & Authentication
-* Add `google-services.json` in `android/app/`
+---
 
-## 📊 Dashboard Screenshots
-*(Add screenshots of Flutter app visualizing gas levels and predictions)*
+## 🎯 Future Enhancements
 
-## 🌐 Use Cases
-* **Cattle Farms**: Prevent respiratory incidents in livestock
-* **Factories**: Monitor emissions and ensure worker safety
-* **Warehouses**: Prevent fire hazards or gas accumulation
-* **Smart Cities**: Ambient air quality tracking
+* AI/ML-based movement prediction
+* Integration with national park databases
+* Drone-based aerial support integration
+* Blockchain for data immutability and transparency
 
-## ✅ Future Enhancements
-* Add CO2/CO detectors and noise level sensors
-* GPS-based sensor mapping
-* Support for LoRaWAN or GSM in remote areas
-* ML model upgrades using federated learning
+---
 
-## 🤝 Contributions
-Pull requests are welcome. Please open an issue first to discuss changes.
+## 🤝 Collaborators
+
+* Forest Rangers and Anti-Poaching Units
+* Local Villagers and Citizen Science Groups
+* NGOs and Disaster Relief Networks
+
+---
 
 ## 📄 License
+
 MIT License
 
+---
+
 ## 📫 Contact
-**Kalyan Vinayak**  
-📧 kalyanvinayak1@gmail.com  
-🌍 [LinkedIn](https://linkedin.com/in/kalyanvinayak)
+
+Kalyan Vinayak
+📧 [kalyanvinayak1@gmail.com](mailto:kalyanvinayak1@gmail.com)
+🌍 [LinkedIn](https://linkedin.com/in/kalyan-vinayak-11a824375)
