@@ -1,0 +1,31 @@
+name: cross_border_protection
+description: A comprehensive LoRa-based environmental monitoring and disaster alert system.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.27.0 # For Firebase initialization
+  cloud_firestore: ^4.15.9 # For Firestore database
+  http: ^1.2.1 # For making HTTP requests to FastAPI
+  flutter_map: ^6.1.0 # For displaying maps
+  latlong2: ^0.9.0 # For LatLng objects with flutter_map
+  geolocator: ^11.0.0 # For getting current device location (optional, for testing)
+  intl: ^0.19.0 # For date formatting
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
